@@ -107,7 +107,13 @@ uploaded_file = st.file_uploader(
     type=["pdf"],
     help="텍스트 기반 PDF만 지원합니다. 스캔 이미지 PDF는 변환되지 않습니다.",
 )
-
+st.markdown("""
+<style>
+[data-testid="stFileUploader"] {
+    width: fit-content;
+}
+</style>
+""", unsafe_allow_html=True)
 if uploaded_file:
     with st.spinner("변환 중..."):
         try:
