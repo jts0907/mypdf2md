@@ -150,14 +150,13 @@ if uploaded_file:
                     data=md_text.encode("utf-8"),
                     file_name=download_name,
                     mime="text/markdown",
-                    
+                )
+        except Exception as e:
+            st.error(f"변환 중 오류 발생: {e}")
 st.divider()
 st.markdown("""
 <div style='text-align:right; color:gray; font-size:0.8em;'>
 오픈소스 도구 <b>pdfplumber</b> 활용 &nbsp;|&nbsp; 제작: <b>eonow687</b>
 </div>
 """, unsafe_allow_html=True)
-                )
-
-        except Exception as e:
-            st.error(f"변환 중 오류 발생: {e}")
+                
