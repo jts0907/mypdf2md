@@ -94,8 +94,15 @@ def pdf_to_markdown(uploaded_file) -> str:
 
 # ── UI ────────────────────────────────────────────────────────
 st.title("📄 PDF → 마크다운 변환기")
-st.caption("- 한글(HWP)에서 PDF로 저장한 문서 또는 PDF파일을 마크다운 텍스트로 변환합니다. \n\n - 사용된 도구는 오픈소스 도구: **pdfplumber** 입니다. **by eonow687**")
-
+st.markdown(
+    """
+    <div style='text-align: right; color: gray; font-size: 0.85em;'>
+    💡 오픈소스 도구 <b>pdfplumber</b> 활용 | 제작: <b>eonow687</b>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.caption("- 한글(HWP)에서 PDF로 저장한 문서 또는 PDF파일을 마크다운 텍스트로 변환합니다.")
 st.info("💡 **사용 방법** \n\n - (HWP파일)한컴오피스에서 HWP 파일을 열고 → 다른 이름으로 저장 → PDF로 저장 → 아래에 업로드, \n\n - (PDF파일) 별도 단계 필요없이 아래에 업로드")
 
 uploaded_file = st.file_uploader(
