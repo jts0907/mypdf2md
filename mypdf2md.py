@@ -1,6 +1,3 @@
-
-복사
-
 import streamlit as st
 import pdfplumber
 import io
