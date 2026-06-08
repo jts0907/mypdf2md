@@ -104,16 +104,15 @@ st.title("📄 PDF → 마크다운 변환기")
 st.caption("- 한글(HWP)에서 PDF로 저장한 문서 또는 기존 PDF파일을 마크다운 텍스트로 변환합니다.")
 
 # ── 보안 경고 ────────────────────────────────────────────────
-st.warning(
-    "**🔒 보안 안내 — 공개 자료 전용**\n\n"
-    "이 변환기는 외부 클라우드 서버(Streamlit)에서 동작하며, 업로드한 파일은 "
-    "변환 처리 과정에서 외부 서버 메모리를 거칩니다.\n\n"
-    "- ✅ **사용 가능**: 이미 공개된 자료 (의안정보시스템상 의안, 공포된 법령·고시, 판례, 헌재결정례, 보도자료, 공개 간행물 등)\n"
-    "- ❌ **사용 금지**: 비공개·내부 검토 문서, 개인정보가 포함된 문서\n\n"
-    "공개 자료 여부가 조금이라도 불확실하면 업로드하지 마십시오. "
-    "업로드 시 발생하는 책임은 사용자에게 있습니다.",
-    icon="⚠️",
-)
+st.markdown("""
+<div style='background-color:#fff8e1; border-left:5px solid #f0a500; padding:14px 18px; border-radius:8px; margin-bottom:16px; display:inline-block;'>
+<b>⚠️ 🔒 보안 안내 — 공개 자료 전용</b><br>
+이 변환기는 외부 클라우드 서버(Streamlit)에서 동작하며, 업로드한 파일은 변환 처리 과정에서 외부 서버 메모리를 거칩니다.<br><br>
+✅ <b>사용 가능</b>: 이미 공개된 자료 (의안정보시스템상 의안, 공포된 법령·고시, 판례, 헌재결정례, 보도자료, 공개 간행물 등)<br>
+❌ <b>사용 금지</b>: 비공개·내부 검토 문서, 개인정보가 포함된 문서<br><br>
+공개 자료 여부가 조금이라도 불확실하면 업로드하지 마십시오. 업로드 시 발생하는 책임은 사용자에게 있습니다.
+</div>
+""", unsafe_allow_html=True)
 
 st.markdown("""
 <div style='background-color:#f0f2f6; padding:14px 18px; border-radius:8px; margin-bottom:16px; display:inline-block;'>
@@ -179,6 +178,6 @@ if uploaded_files:
 st.divider()
 st.markdown("""
 <div style='text-align:right; color:gray; font-size:0.8em;'>
-오픈소스 도구 <b>pdfplumber</b> 활용 &nbsp;|&nbsp; 제작: <b>eonow687</b> &nbsp;|&nbsp; 2026.06.08 업데이트
+오픈소스 도구 <b>pdfplumber</b> 활용 &nbsp;|&nbsp; 제작: <b>eonow687</b> &nbsp;|&nbsp; 2026.05.17 업데이트
 </div>
 """, unsafe_allow_html=True)
