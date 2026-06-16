@@ -309,6 +309,6 @@ if uploaded_files:
 st.divider()
 st.markdown("""
 <div class="app-footer">
-오픈소스 도구 <b>pdfplumber</b> 활용 &nbsp;|&nbsp; 제작: <b>eonow687</b> &nbsp;|&nbsp; 2026.06.08 업데이트
+오픈소스 도구 <b>pdfplumber</b> 활용 &nbsp;|&nbsp; 제작: <b>eonow687</b> &nbsp;|&nbsp; 2026.06.16 업데이트
 </div>
 """, unsafe_allow_html=True)
